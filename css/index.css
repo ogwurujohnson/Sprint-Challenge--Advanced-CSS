@@ -160,7 +160,7 @@ p {
   width: 100%;
   margin: 0 auto;
 }
-@keyframes example {
+@keyframes navigation-background {
   from {
     background-color: #23293B;
   }
@@ -169,7 +169,7 @@ p {
   }
 }
 .navigation-section {
-  animation-name: example;
+  animation-name: navigation-background;
   animation-duration: 4s;
   padding-top: 3rem;
   display: flex;
@@ -211,6 +211,14 @@ footer {
   justify-content: center;
   align-items: center;
 }
+@keyframes space-images {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .home .intro h2 {
   padding: 15px;
 }
@@ -218,6 +226,8 @@ footer {
   padding: 0 15px;
 }
 .home .space-image img {
+  animation-name: space-images;
+  animation-duration: 6s;
   border-radius: 5px;
   width: 100%;
 }
@@ -227,6 +237,8 @@ footer {
   width: 100%;
 }
 .home .space-images img {
+  animation-name: space-images;
+  animation-duration: 6s;
   width: 28%;
   margin: 20px 2.5%;
   border-radius: 20px;
