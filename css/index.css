@@ -189,9 +189,12 @@ p {
 .navigation-section .navigation nav {
   margin-top: 2rem;
   margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 .navigation-section .navigation nav a {
-  padding-right: 3rem;
   text-decoration: none;
   color: #454A59;
   font-size: 1.5rem;
@@ -199,6 +202,9 @@ p {
 @media (max-width: 500px) {
   .navigation-section .navigation {
     width: 100%;
+  }
+  .navigation-section .navigation nav {
+    justify-content: space-evenly;
   }
 }
 footer {

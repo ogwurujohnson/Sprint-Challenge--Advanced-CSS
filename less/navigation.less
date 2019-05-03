@@ -33,8 +33,10 @@
     nav {
       margin-top: @small-margin;
       margin-bottom: @xsmall-margin;
+      width: 100%;
+      .flex-mixin(row);
+      justify-content: space-evenly;
       a {
-        padding-right: @medium-padding;
         text-decoration: none;
         color: @nav-font;
         font-size: @small-font;
@@ -46,6 +48,10 @@
   @media @mobile {
     .navigation {
       width: 100%;
+
+      nav {
+          justify-content: space-evenly;
+      }
     }
   }
 }
