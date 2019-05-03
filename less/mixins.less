@@ -17,3 +17,9 @@
     background: @background;
     font-size: @medium-font;
 }
+
+// button effects
+.button-effect(@background-color, @color, @degree) {
+    background-color: lighten(@background-color, @degree);
+    color: @color;
+}

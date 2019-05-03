@@ -67,6 +67,10 @@
       .btn {
         // use the button mixin
         .button(@btn-bg-color, @wild-sand, 30%);
+
+        &:hover {
+          .button-effect(@btn-bg-color, @waterloo, 5%);
+        }
       }
     }
 
