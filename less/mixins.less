@@ -5,3 +5,15 @@
     display: flex;
     flex-direction: @direction;
 }
+
+// Button mixin
+.button(@background, @color, @width) {
+    padding: @xsmall-padding;
+    width: @width;
+    border-radius: 5px;
+    margin-bottom: @medium-margin;
+    text-align: center;
+    color: @color;
+    background: @background;
+    font-size: @medium-font;
+}
