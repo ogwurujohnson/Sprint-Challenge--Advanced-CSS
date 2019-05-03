@@ -332,3 +332,32 @@ footer {
     width: 100%;
   }
 }
+.contact-section .form-section {
+  display: flex;
+  flex-direction: column;
+  /* form box styling */
+}
+.contact-section .form-section .box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.contact-section .form-section .box input {
+  width: 70%;
+  height: 30px;
+  border: 1px solid black;
+}
+.contact-section .form-section .box label {
+  padding-bottom: 10px;
+}
+.contact-section .form-section .box textarea {
+  margin-bottom: 20px;
+  border: 1px solid black;
+}
+.contact-section .form-section .submit {
+  border: 1px solid black;
+  padding: 10px;
+  width: 100px;
+}
+/* end form box styling */
