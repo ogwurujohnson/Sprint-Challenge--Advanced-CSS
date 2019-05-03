@@ -186,6 +186,11 @@ p {
   color: #454A59;
   font-size: 1.5rem;
 }
+@media (max-width: 500px) {
+  .navigation-section .navigation {
+    width: 100%;
+  }
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
