@@ -63,7 +63,8 @@
 
       .btn {
         // use the button mixin
-        .button(@btn-bg-color, @wild-sand, 30%, 10%);
+        .button(@btn-bg-color, @wild-sand);
+        width: 30%;
 
         &:hover {
           .button-effect(@btn-bg-color, @waterloo, 5%);
@@ -128,8 +129,8 @@
 
       .walk-text {
         .btn {
-          border: 1px solid yellow;
-          .button(@btn-bg-color, @wild-sand, 100%, 60px);
+          .button(@btn-bg-color, @wild-sand);
+          width: 100%;
         }
       }
     }
