@@ -1,1 +1,53 @@
 // Navigation code here
+
+// animation code
+@keyframes navigation-background {
+  from {
+    background-color: @ebony-clay;
+  }
+  to {
+    background-color: @nav-bg;
+  }
+}
+// Navigation Section Block
+.navigation-section {
+  // Animation code
+  animation-name: navigation-background;
+  animation-duration: 4s;
+
+  padding-top: @medium-padding;
+  .flex-mixin(column);
+  align-items: center;
+  background-color: @nav-bg;
+  border: 2px solid @nav-border;
+  width: 100%;
+
+  // Navigation Links Header Section
+  .navigation {
+    width: 50%;
+    margin: auto;
+    .flex-mixin(row);
+    justify-content: center;
+
+    // Navigation Links Block
+    nav {
+      margin-top: @small-margin;
+      margin-bottom: @xsmall-margin;
+      width: 100%;
+      .flex-mixin(row);
+      justify-content: space-evenly;
+      a {
+        text-decoration: none;
+        color: @nav-font;
+        font-size: @small-font;
+      }
+    }
+  }
+
+  // Responsive code for Navigation Section Block
+  @media @mobile {
+    .navigation {
+      width: 100%;
+    }
+  }
+}

@@ -3,9 +3,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SpaceWalkers</title>
 
+  <link rel="stylesheet/less" type="text/css" href="less/index.less" />
   <link href="https://fonts.googleapis.com/css?family=Russo+One|Ubuntu" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
 
@@ -17,11 +18,26 @@
 <body>
 
  <!-- navigation code here -->
+ <div class="navigation-section">
+   <h2>SpaceWalkers</h2>
+   <header class="navigation">
+     <nav>
+       <a href="#">Home</a>
+       <a href="#">About Us</a>
+       <a href="#">Blog</a>
+       <a href="contact.html">Contact</a>
+       <a href="#">Sign In</a>
+     </nav>
+   </header>
+ </div>
 
   <div class="container home">
 
     <header class="intro">
        <!-- image code here -->
+       <section class="space-image">
+         <img src="img/main-header.png" alt="space-image">
+       </section>
 
       <h2>Lift Off</h2>
     
@@ -62,10 +78,19 @@
 
     </section>
 
+    <section class="subscription-form">
+      <h2>Subscribe To Our Newsletter</h2>
+      <form action="" class="subscription">
+        <input type="text" placeholder="Email Address">
+        <button class="submit">Subscribe</button>
+      </form>
+    </section>
+
     <footer>
       <p>Copyright SpaceWalkers 2018</p>
     </footer>
 
   </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
 </body>
 </html>

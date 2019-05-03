@@ -1,17 +1,33 @@
 // Home Content
 
+@keyframes space-images {
+  from  {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .home {
-
   .intro {
-
     h2 {
       padding: 15px;
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
-  
+  }
+
+  .space-image {
+    img {
+      animation-name: space-images;
+      animation-duration: 6s;
+
+      border-radius: 5px;
+      width: 100%;
+    }
   }
 
   .space-images {
@@ -20,6 +36,9 @@
     width: 100%;
 
     img {
+      animation-name: space-images;
+      animation-duration: 6s;
+
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
@@ -58,13 +77,20 @@
       }
 
       .btn {
+        // use the button mixin
+        .button(@btn-bg-color, @wild-sand);
+        width: 30%;
+
+        &:hover {
+          .button-effect();
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+
       img {
         width: 100%;
         height: auto;
@@ -72,4 +98,91 @@
       }
     }
   }
-}// home
+
+  // Responsive styling of Home section
+  @media @mobile {
+    .space-image {
+      img {
+        width: 100%;
+      }
+    }
+    // make space-images section responsive
+    .space-images {
+      .flex-mixin(column);
+
+      // make each space image responsive and remove some
+      img {
+        width: 90%;
+        margin: @small-margin auto;
+        &:nth-of-type(2) {
+          display: none;
+        }
+        &:nth-of-type(3) {
+          display: none;
+        }
+      }
+    }
+
+    .walk {
+      .flex-mixin(column-reverse);
+      width: 90%;
+      padding: @medium-margin 0px;
+      margin: auto;
+      .walk-text {
+        width: 100%;
+      }
+
+      .walk-img {
+        width: 100%;
+        margin-left: 0%;
+        margin: auto;
+        img {
+          margin: auto;
+          width: 100%;
+        }
+      }
+
+      // Make button responsive
+      .walk-text {
+        .btn {
+          .button(@btn-bg-color, @wild-sand);
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // STyle subscription signup form
+  .subscription-form {
+    width: 80%;
+    margin: auto;
+    .flex-mixin(column);
+    .subscription {
+      padding: @small-padding 0;
+      
+      .flex-mixin(row);
+      justify-content: space-between;
+
+      // subscription input style
+      input {
+        width: 90%;
+        height: 40px;
+        border: 1px solid black;
+        flex: 2;
+      }
+
+      // subscription form button style
+      .submit {
+        border: 1px solid @btn-bg-color;
+        background: @btn-bg-color;
+        color: @wild-sand;
+        padding: 10px;
+        width: 100px;
+      }
+    }
+  }
+
+  @media @mobile {
+    width: 100%;
+  }
+} // home
