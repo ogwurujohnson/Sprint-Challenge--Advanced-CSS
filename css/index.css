@@ -288,4 +288,14 @@ footer {
   .home .space-images img:nth-of-type(3) {
     display: none;
   }
+  .home .walk {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 90%;
+    padding: 3rem 0px;
+    margin: auto;
+  }
+  .home .walk .walk-text {
+    width: 100%;
+  }
 }
