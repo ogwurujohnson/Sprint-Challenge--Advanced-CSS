@@ -203,9 +203,6 @@ p {
   .navigation-section .navigation {
     width: 100%;
   }
-  .navigation-section .navigation nav {
-    justify-content: space-evenly;
-  }
 }
 footer {
   color: #22283B;
